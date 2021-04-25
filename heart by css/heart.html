@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .heart{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: pink;
+        height: 100px;
+        width: 100px;
+        transform: rotate(-45deg);
+
+        
+
+        
+    }
+    .heart::after{
+        background-color: pink;
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        top: 0;
+        left: 50px;
+        
+
+    }
+
+
+    .heart::before {
+    content:"" ;
+    background-color: pink;
+    border-radius: 100%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 0px;
+  }
+
+  body{
+      background: repeating-linear-gradient(90deg,pink,white,pink);
+  }
+  
+</style>
+<body>
+    
+    <div class="heart"></div>
+</body>
+</html>
