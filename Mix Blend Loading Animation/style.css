@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+.container{
+    background-color: white;   
+     border: 2px solid black; 
+    padding: 10px;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+
+
+.container::after{
+    background-color: white;
+    mix-blend-mode: difference;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center left;
+
+    content: '';
+    height: 100%;
+    width: 100%;
+
+    animation: grow 5s linear infinite;
+}
+
+h1{
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+
+@keyframes grow {
+        to{
+            transform: scaleX(1);
+        }
+}
